@@ -1,7 +1,7 @@
-package ch05;
+package ch06;
 
-import ch03.MyLinkedList;
-import ch03.MyListNode;
+import ch04.MyLinkedList;
+import ch04.MyListNode;
 
 interface Queue {
 

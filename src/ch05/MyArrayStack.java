@@ -1,6 +1,6 @@
-package ch04;
+package ch05;
 
-import ch02.MyArray;
+import ch03.MyArray;
 
 public class MyArrayStack {
 
