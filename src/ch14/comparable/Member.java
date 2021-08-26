@@ -1,7 +1,6 @@
-package ch14;
+package ch14.comparable;
 
-public class Member {
-
+public class Member implements Comparable<Member> {
 
 	private int memberId; // 회원 아이디
 	private String memberName; // 회원 이름
@@ -26,18 +25,18 @@ public class Member {
 	public void setMemberName(String memberName) {
 		this.memberName = memberName;
 	}
-	
+
 	@Override
 	public int hashCode() {
 		return memberId;
-	}	
-	
+	}
+
 	@Override
 	public boolean equals(Object obj) {
-		if(obj instanceof Member) {
-			if(this.memberId ==((Member) obj).getMemberId()) {
+		if (obj instanceof Member) {
+			if (this.memberId == ((Member) obj).getMemberId()) {
 				return true;
-			}else {
+			} else {
 				return false;
 			}
 		}
@@ -47,6 +46,12 @@ public class Member {
 	@Override
 	public String toString() {
 		return memberName + " 회원님의 아이디는 " + memberId + "입니다";
+	}
+
+	@Override
+	public int compareTo(Member member) {
+		return this.memberId - member.getMemberId(); // 오름차순
+		//return (this.memberId - member.getMemberId()) * (-1); // 내림차순
 	}
 
 }

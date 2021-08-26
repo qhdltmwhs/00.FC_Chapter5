@@ -1,4 +1,4 @@
-package ch14;
+package ch14.comparator;
 
 import java.util.Iterator;
 import java.util.TreeSet;
@@ -8,7 +8,12 @@ public class MemberTreeSet {
 	private TreeSet<Member> treeSet;
 
 	public MemberTreeSet() {
-		treeSet = new TreeSet<>();
+		/*
+		 * TreeSet 에서 Comparator 사용시 
+		 * TreeSet 객체 생성시 Comparator가 구현된 객체를 넣어줘야 한다.
+		 * ==> public class Member implements Comparator<Member>
+		 */
+		treeSet = new TreeSet<>(new Member());
 	}
 
 	public void addMember(Member member) {

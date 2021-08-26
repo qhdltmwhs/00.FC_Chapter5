@@ -1,14 +1,16 @@
-package ch14;
+package ch14.comparable;
 
 public class MemberTreeSetTest {
 
 	public static void main(String[] args) {
 		
 		/*
-		 * TreeSet
-		 * 같은 키값 존재할 수 없다.
-		 * 담으려는 객체의 클래스내부에서 
-		 * equal & hashCode 메서드를 재정의 되어 중복을 방지한다.
+		 * TreeSet 같은 키값 존재할 수 없다.
+		 * java.lang.Comparable ==> 
+		 * Comparable은 java.lang이며, Comparator는 java.util이다. 
+		 * 비교대상이 대는 클래스 내부에 Comparable의 interfacef를 implement하여 
+		 * compareTo 메서드를 구현해야한다.
+		 * 구현하지않고 add 메서드 사용시 ==> Exception : cannot be cast to java.lang.Comparable 
 		 */
 		MemberTreeSet memberTreeSet = new MemberTreeSet();
 
