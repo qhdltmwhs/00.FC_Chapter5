@@ -27,7 +27,6 @@ public class MemberHashMapTest {
 
 		memberHashMap.showAllMember();
 		
-		
 		memberHashMap.removeMember(memberHong.getMemberId());
 		System.out.println();
 
@@ -41,6 +40,7 @@ public class MemberHashMapTest {
 		hashMap.put(2004, "모네");
 		hashMap.put(2005, "모네");
 		
+		System.out.println();
 		System.out.println(hashMap);
 
 	}
